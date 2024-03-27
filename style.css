@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@100;400;500&family=Noto+Sans:wght@200;400&family=Open+Sans&family=Red+Hat+Display:wght@500;700;900&family=Roboto:wght@300;400&display=swap');
+body{
+    margin: 0%;
+    padding: 0%;
+    background:url(bacck.jpg);
+    color: white;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+@media(max-width:600px){
+    body{
+        background: url(bacck2.jpg);
+    }
+}
+
+
+
+
+/* navbar css start */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Added */
+    margin: 0 auto; /* Added */
+}
+
+nav {
+    background: #072b4788;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.411);
+    display: flex; /* Added */
+    justify-content: space-between; /* Added */
+    align-items: center; /* Added */
+    padding:40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+label.logo img{
+    color: white;
+    width: 150px;
+    margin-left: 100px;
+}
+
+nav ul {
+    display: flex;
+    /* float: right; */
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    .nav-ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-top: 20px;
+        z-index: 99;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        padding: 7px 5px; /* Adjust padding for smaller screens */
+
+    }
+
+    a:hover, a.active {
+        background: none;
+        color: #ffc21b;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+    .logo-container {
+        order: 2; /* Change the order of the logo */
+      }
+      .checkbtn {
+        order: 1; /* Change the order of the hamburger icon */
+      }
+      label.logo img{
+        margin-left: 0px;
+    }
+}
+
+section {
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+/* navbar css end */
+
+
+
+/* menu item css start */
+.devzur_menu-item-img img{
+    /* border-radius: 58% 42% 48% 52% / 43% 32% 68% 57%; */
+    /* box-shadow: 0px 0px 8px rgba(255, 238, 0, 0.696);   */
+    width: 130px;
+}
+.devzur-menu-item-container{
+    text-align: center;
+    align-items: center;
+    width: 150px;
+    margin: 10px ; 
+    /* border-radius: 6px; */
+    /* border: 1px solid white; */
+    /* padding: 10px 5px; */
+    /* background-color: rgba(255, 255, 255, 0.212); */
+}
+.devzur_menu-item-details p,h3{
+    margin: 5px;
+}
+.devzur_menu-item-details p{
+    font-size: 12px;
+}
+.devzur_menu-item-details{
+    margin: 0%;
+    text-align: center;
+}
+.devzur_menu-item-order{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    text-align: center;
+}
+.devzur_menu-item-order p{
+    margin: 0%;
+    padding: 0%;
+}
+.devzur_menu-item-img img{
+    width: 150px;
+    padding: 0%;
+    margin: 0%;
+    border-bottom: 1px solid white;
+    filter:drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4)) ;
+}
+.devzur_menu-item-container-main-flex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.devzur_menu-item-container-main-burger{
+    text-align: center;;
+}
+
+.devzur_menu-item-title{
+    padding: 30px;
+}
+span{
+    font-weight: bolder;
+    font-size: 20px;
+}
+.devzur_menu-item-container{
+    margin: 10px;
+}
+/* menu item css end */
+
+/* 
+.devzur_menu-categories{
+    font-size: 25px;
+}
+.devzur_menu-categories ul{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin: 20px;
+    overflow-x: visible;
+} */
+
+.devzur_menu-categories {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    scrollbar-width: thin; /* Width of the scrollbar */
+    scrollbar-color: transparent transparent; /* Color of the thumb and track */
+    position: relative; /* Position arrows relative to the container */
+    text-align: center;
+    margin: 30px;
+    font-size: 25px;
+}
+
+.devzur_menu-categories ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* Remove bullet points */
+}
+
+.devzur_menu-categories ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Add space between list items */
+}
+
+.devzur_menu-categories ul li:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+}
+.devzur_menu-categories a{
+    text-decoration: none;
+    color: white;
+}
+.devzur_menu-categories a:hover{
+    color: #ffc21b;
+}
+/* For WebKit browsers (Chrome, Safari) */
+.devzur_menu-categories::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+
+.devzur_menu-categories::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Color of the thumb */
+}
+
+.devzur_menu-categories::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the track */
+}
+
+/* For Firefox */
+.devzur_menu-categories {
+    scrollbar-width: thin; /* Width of the scrollbar */
+    scrollbar-color: transparent transparent; /* Color of the thumb and track */
+}
